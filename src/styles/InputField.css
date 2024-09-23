@@ -1,0 +1,115 @@
+.input-field {
+  position: relative;
+  width: 100%;
+}
+
+.input-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.select-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 16px;
+  color: var(--color-green);
+}
+
+.info-icon {
+  color: var(--color-grey);
+  cursor: pointer;
+}
+
+.info-tooltip {
+  top: -60px;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: rgba(122, 122, 122, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--color-light);
+  width: 250px;
+  border-radius: var(--border-radius-2);
+  position: absolute;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--color-grey);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.info-wrapper {
+  position: absolute;
+  left: 40px;
+  top: 55%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+.input-field input,
+.input-field select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-grey);
+  padding: 10px 0;
+  font-size: 16px;
+  outline: none;
+  background: transparent;
+  appearance: none;
+}
+
+.input-field input:focus + label,
+.input-field input:not(:placeholder-shown) + label,
+.input-field select:focus + label,
+.input-field.filled label {
+  top: -10px;
+  font-size: 12px;
+}
+
+.input-field input:focus + label + .info-wrapper,
+.input-field input:not(:placeholder-shown) + label + .info-wrapper,
+.input-field select:focus + label + .info-wrapper,
+.input-field.filled label + .info-wrapper {
+  top: -10px;
+}
+
+.input-field.invalid input,
+.input-field.invalid select {
+  border-bottom: 1px solid var(--color-error);
+}
+
+.input-field.confirmed input,
+.input-field.confirmed select {
+  border-bottom: 1px solid var(--color-green);
+  /* color: grey; */
+}
+
+.input-field input:disabled,
+.input-field select:disabled {
+  color: var(--color-grey); /* ou outra cor consistente, como #888 */
+}
+
+
+
+@media (max-width: 1025px) {
+  .input-field input,
+  .input-field select {
+    font-size: 16px;
+  }
+
+  .info-tooltip {
+    margin: 0;
+    top: -130px;
+    width: 150px;
+  }
+}
