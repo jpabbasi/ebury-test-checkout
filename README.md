@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# Ebury Test Checkout
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é parte do desafio técnico para a posição de Frontend na Ebury. O objetivo do desafio é implementar um fluxo de checkout funcional e responsivo, com validação de campos, chamada de API mockada, e testes automatizados.
 
-## Available Scripts
+- **Preview**:
 
-In the project directory, you can run:
+  - O projeto foi deployado no Vercel e pode ser acessado através do seguinte link: wip
 
-### `npm start`
+## Funcionalidades
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Funcionalidades do Checkout**:
+  - Divido em etapas.
+  - Cartão customizado com a bandeira.
+  - Exibe um indicador visual para o progresso no checkout.
+- **Validação de Campos**:
+  - Todos os campos do formulário são validados conforme os requisitos do protótipo fornecido.
+- **Chamada de API**:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  - Mock da chamada de API `/pagar` no final do processo de checkout para simulação de pagamento.
+  - A chamada é mockada de forma na qual possamos testar. Cartões terminados com digito 5 tem seu pagamento aprovado. Diferente disso, os pagamentos são recusados.
 
-### `npm test`
+- **(Cartão falso) Exemplo de sucesso**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - 378282246310005
 
-### `npm run build`
+- **(Cartão falso) Exemplo de falha**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - 4111111111111111
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Responsividade**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - O layout é totalmente responsivo e se adapta a diferentes tamanhos de tela (desktop, tablet e mobile).
 
-### `npm run eject`
+- **Acessibilidade**:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  - Utilização de HTML semântico (adaptado ao layout) e ícones SVG com textos alternativos ocultos para melhorar a acessibilidade.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Testes Automatizados**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  - Testes para os componentes chave utilizando Jest e Testing Library, com foco em:
+    - Renderização correta dos componentes.
+    - Comportamento adequado do fluxo de checkout.
+    - Verificação de ícones e estados de progresso.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Análise Estática**:
+  - Uso de **ESLint/Prettier** para formatação automática do código.
 
-## Learn More
+## Tecnologias Utilizadas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React**: Biblioteca principal para a construção do frontend.
+- **Typescript**: Utilizado para adicionar tipagem estática e melhorar a qualidade do código.
+- **Axios**: Para realizar as chamadas de API mockadas.
+- **Jest & Testing Library**: Para escrever e rodar testes automatizados.
+- **ESLint & Prettier**: Para garantir a consistência e qualidade do código.
+- **React Icons**: Ícones SVG para melhorar a experiência visual.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Como Rodar o Projeto
+
+1. **Clone o repositório**:
+
+   ```bash
+   git clone https://github.com/jpabbasi/ebury-test-checkout.git
+   cd ebury-test-checkout
+
+   ```
+
+2. **Instale as dependências**:
+
+   ```bash
+   npm install
+
+   ```
+
+3. **Rodar o projeto localmente**:
+
+   ```bash
+   npm start
+
+   ```
+
+4. **Rodar os testes**:
+
+   ```bash
+   npm test
+
+   ```
+
+5. **Rodar o Prettier**:
+   ```bash
+   npm run format
+   ```
