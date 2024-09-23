@@ -86,6 +86,12 @@ Este projeto é parte do desafio técnico para a posição de Frontend na Ebury.
    ```
 
 5. **Rodar o Prettier**:
+
    ```bash
    npm run format
+   ```
+
+6. **Rodar o build**:
+   ```bash
+   npm run build
    ```
