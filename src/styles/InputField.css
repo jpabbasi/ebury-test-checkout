@@ -91,12 +91,11 @@
 .input-field.confirmed input,
 .input-field.confirmed select {
   border-bottom: 1px solid var(--color-green);
-  /* color: grey; */
 }
 
 .input-field input:disabled,
 .input-field select:disabled {
-  color: var(--color-grey); /* ou outra cor consistente, como #888 */
+  color: var(--color-grey);
 }
 
 
