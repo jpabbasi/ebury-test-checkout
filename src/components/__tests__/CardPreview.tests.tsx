@@ -16,7 +16,7 @@ describe('CardPreview Component', () => {
     mockGetCardBrandFullName.mockClear();
   });
 
-  it('deve renderizar corretamente com dados completos', () => {
+  it('Must render correctly all data', () => {
     mockGetCardBrandFullName.mockReturnValue('American Express');
 
     render(
@@ -38,7 +38,7 @@ describe('CardPreview Component', () => {
     expect(screen.getByText('12/25')).toBeInTheDocument();
   });
 
-  it('deve renderizar placeholders corretamente quando os dados estão ausentes', () => {
+  it('Must render placeholders correctly if fields are empty', () => {
     mockGetCardBrandFullName.mockReturnValue('Unknown');
 
     render(
@@ -55,7 +55,7 @@ describe('CardPreview Component', () => {
     expect(screen.getByText('MM/AA')).toBeInTheDocument();
   });
 
-  it('deve aplicar corretamente a classe CSS baseada na marca do cartão', () => {
+  it('Must apply correctly css based on cardBrand', () => {
     render(
       <CardPreview
         cardBrand="mastercard"

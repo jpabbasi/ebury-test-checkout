@@ -6,13 +6,13 @@ import reloadPage from '../../utils/reloadPage';
 jest.mock('../../utils/reloadPage', () => jest.fn());
 
 describe('ReturnButton Component', () => {
-  it('deve renderizar o ícone e o texto corretamente', () => {
+  it('Must render the icon and text correctly', () => {
     render(<ReturnButton />);
     expect(screen.getByText('Alterar forma de pagamento')).toBeInTheDocument();
     expect(screen.getByRole('button')).toBeInTheDocument();
   });
 
-  it('deve chamar reloadPage ao clicar no botão', () => {
+  it('Must call reloadPage when the button is clicked', () => {
     render(<ReturnButton />);
 
     fireEvent.click(screen.getByRole('button'));

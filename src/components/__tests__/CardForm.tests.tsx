@@ -9,7 +9,7 @@ describe('CardForm Component', () => {
     mockOnSubmit.mockClear();
   });
 
-  it('deve renderizar o formulário corretamente', () => {
+  it('Must render the form correctly', () => {
     render(<CardForm onSubmit={mockOnSubmit} />);
 
     expect(screen.getByLabelText(/Número do cartão/i)).toBeInTheDocument();
@@ -25,7 +25,7 @@ describe('CardForm Component', () => {
     ).toBeInTheDocument();
   });
 
-  it('deve atualizar os valores do formulário ao digitar', () => {
+  it('Must update the form values as you type', () => {
     render(<CardForm onSubmit={mockOnSubmit} />);
 
     const cardNumberInput = screen.getByLabelText(/Número do cartão/i);
@@ -39,7 +39,7 @@ describe('CardForm Component', () => {
     expect(cardHolderInput).toHaveValue('Pedro Abbasi');
   });
 
-  it('não deve chamar a função onSubmit se houver erros de validação', async () => {
+  it("Musn't call function onSubmit if there are empty fields", async () => {
     render(<CardForm onSubmit={mockOnSubmit} />);
 
     const submitButton = screen.getByRole('button', { name: /CONTINUAR/i });

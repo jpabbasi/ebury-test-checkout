@@ -9,7 +9,7 @@ describe('Notification Component', () => {
     mockOnClose.mockClear();
   });
 
-  it('deve renderizar uma mensagem de sucesso quando o status for 200', () => {
+  it('Must render a success message when the status is 200', () => {
     render(
       <Notification status={200} isVisible={true} onClose={mockOnClose} />,
     );
@@ -18,7 +18,7 @@ describe('Notification Component', () => {
     ).toBeInTheDocument();
   });
 
-  it('deve renderizar uma mensagem de erro quando o status não for 200', () => {
+  it('Must render an error message when the status is not 200', () => {
     render(
       <Notification status={400} isVisible={true} onClose={mockOnClose} />,
     );
@@ -27,7 +27,7 @@ describe('Notification Component', () => {
     ).toBeInTheDocument();
   });
 
-  it('deve ocultar a notificação após 5 segundos e chamar a função onClose', async () => {
+  it('Must hide the notification after 5 seconds and call the onClose function', async () => {
     jest.useFakeTimers();
 
     render(

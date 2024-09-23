@@ -9,7 +9,7 @@ describe('Button Component', () => {
     mockOnClick.mockClear();
   });
 
-  it('deve renderizar corretamente com o texto passado como children', () => {
+  it('Must render correctly the text as children', () => {
     render(
       <Button onClick={mockOnClick} currentStep={2}>
         Continuar
@@ -20,7 +20,7 @@ describe('Button Component', () => {
     expect(buttonElement).toBeInTheDocument();
   });
 
-  it('deve chamar a função onClick ao ser clicado', () => {
+  it('Must call a function onClick', () => {
     render(
       <Button onClick={mockOnClick} currentStep={2}>
         Continuar
@@ -33,7 +33,7 @@ describe('Button Component', () => {
     expect(mockOnClick).toHaveBeenCalledTimes(1);
   });
 
-  it('deve desabilitar o botão quando currentStep é 4', () => {
+  it('Must disable the button if step is 4', () => {
     render(
       <Button onClick={mockOnClick} currentStep={4}>
         Pagamento Confirmado

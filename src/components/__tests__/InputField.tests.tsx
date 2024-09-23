@@ -9,7 +9,7 @@ describe('InputField Component', () => {
     mockOnChange.mockClear();
   });
 
-  it('deve renderizar um campo de input com os valores corretos', () => {
+  it('Must render input with correct values', () => {
     render(
       <InputField
         name="testInput"
@@ -24,7 +24,7 @@ describe('InputField Component', () => {
     expect(screen.getByLabelText('Test Label')).toHaveValue('Test Value');
   });
 
-  it('deve chamar a função onChange ao alterar o valor', () => {
+  it('Must call the onChange function when changing the value', () => {
     render(
       <InputField
         name="testInput"
@@ -42,7 +42,7 @@ describe('InputField Component', () => {
     expect(mockOnChange).toHaveBeenCalledWith(expect.any(Object));
   });
 
-  it('deve renderizar um campo select quando options são passadas', () => {
+  it('Must render a select field when options are provided', () => {
     const options = [
       { value: 1, label: 'Option 1' },
       { value: 2, label: 'Option 2' },
@@ -65,7 +65,7 @@ describe('InputField Component', () => {
     expect(select.options[2].text).toBe('Option 2');
   });
 
-  it('deve exibir uma mensagem de erro quando houver erro', () => {
+  it('Must display an error message when there is an error', () => {
     render(
       <InputField
         name="testInput"
@@ -79,7 +79,7 @@ describe('InputField Component', () => {
     expect(screen.getByText('This is an error message')).toBeInTheDocument();
   });
 
-  it('deve mostrar o tooltip de informações ao clicar no ícone apenas', () => {
+  it('Must show the information tooltip only when the icon is clicked', () => {
     render(
       <InputField
         name="testInput"
@@ -99,7 +99,7 @@ describe('InputField Component', () => {
     expect(screen.getByText('This is info text')).toBeInTheDocument();
   });
 
-  it('deve desabilitar o input quando a prop "disabled" é passada', () => {
+  it("Must disable the input when the 'disabled' prop is provided", () => {
     render(
       <InputField
         name="testInput"
