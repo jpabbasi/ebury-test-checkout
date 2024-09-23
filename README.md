@@ -4,7 +4,7 @@ Este projeto é parte do desafio técnico para a posição de Frontend na Ebury.
 
 - **Preview**:
 
-  - O projeto foi deployado no Vercel e pode ser acessado através do seguinte link: wip
+  - O projeto foi deployado no Vercel e pode ser acessado através do seguinte link: [production](https://ebury-test-checkout.vercel.app)
 
 ## Funcionalidades
 
