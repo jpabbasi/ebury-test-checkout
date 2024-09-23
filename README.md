@@ -9,7 +9,7 @@ Este projeto é parte do desafio técnico para a posição de Frontend na Ebury.
 ## Funcionalidades
 
 - **Funcionalidades do Checkout**:
-  - Divido em etapas.
+  - Dividido em etapas.
   - Cartão customizado com a bandeira.
   - Exibe um indicador visual para o progresso no checkout.
 - **Validação de Campos**:
