@@ -21,7 +21,7 @@ describe('processPayment API tests', () => {
     mock.restore();
   });
 
-  it('should approve payment when cardNumber ends with 5', async () => {
+  it('deve aprovar o pagamento quando o cardNumber termina com 5', async () => {
     const formData = { cardNumber: '12345', cardHolder: 'Pedro Abbasi' };
 
     mock.onPost('/pagar').reply(200, {
@@ -37,7 +37,7 @@ describe('processPayment API tests', () => {
     });
   });
 
-  it('should fail payment when cardNumber does not end with 5', async () => {
+  it('deve falhar o pagamento quando o cardNumber não termina com 5', async () => {
     const formData = { cardNumber: '12344', cardHolder: 'Pedro Abbasi' };
 
     mock.onPost('/pagar').reply(400, {
@@ -52,7 +52,7 @@ describe('processPayment API tests', () => {
     }
   });
 
-  it('should handle network error correctly', async () => {
+  it('deve cubrir erros de network', async () => {
     const formData = { cardNumber: '12345', cardHolder: 'Pedro Abbasi' };
 
     mock.onPost('/pagar').networkError();
