@@ -1,6 +1,6 @@
-# Ebury Test Checkout
+# Test Checkout
 
-Este projeto é parte do desafio técnico para a posição de Frontend na Ebury. O objetivo do desafio é implementar um fluxo de checkout funcional e responsivo, com validação de campos, chamada de API mockada, e testes automatizados.
+O objetivo do desafio é implementar um fluxo de checkout funcional e responsivo, com validação de campos, chamada de API mockada, e testes automatizados.
 
 - **Preview**:
 
